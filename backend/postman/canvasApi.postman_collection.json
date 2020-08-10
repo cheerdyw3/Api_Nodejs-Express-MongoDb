@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "6bab2f66-9c52-489f-a40d-8069d8a8606d",
+		"name": "canvasApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pattern",
+			"item": [
+				{
+					"name": "/create/pattern/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"partentName\" : \"cheerModel\",\n    \"imagePattern\" : \"cheerModel.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/create/pattern/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create",
+								"pattern",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/edit/pattern",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\" : \"5d0368c6a17ce63440b5b932\",\n\t\"partentName\" : \"cheerModels\",\n    \"imagePattern\" : \"cheerModels.jpg\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/all/pattern",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get/all/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"all",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/pattern/byId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\":\"5d0368c6a17ce63440b5b932\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/pattern/byId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"pattern",
+								"byId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete/pattern",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\":\"5d0375c87caded5304f2da1e\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "canvas",
+			"item": [
+				{
+					"name": "/create/canvas/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":\"5d022b713418fb3f806dce99\",\n    \"batchId\":\"5d022b713418fb3f806dce10\",\n    \"patternId\":\"5d022b713418fb3f806dce06\",\n    \"canvasName\":\"system tese 99\",\n    \"model\": [\n\t\t\t{\n    \t\t\t\"name\" : \"customerSegments\"\n\t\t\t},{\n\t    \t\t\"name\" : \"customerRelationships\"\n\t\t\t},{\n\t    \t\t\"name\" : \"channels\"\n\t\t\t},{\n\t    \t\t\"name\" : \"keyPartners\"\n\t\t\t},{\n\t    \t\t\"name\" : \"keyActivities\"\n\t\t\t},{\n\t    \t\t\"name\" : \"keyResources\"\n\t\t\t},{\n\t    \t\t\"name\" : \"costStructure\"\n\t\t\t},{\n\t    \t\t\"name\" : \"revenueStreams\"\n\t\t\t},{\n\t    \t\t\"name\" : \"valuePropositions\"\n\t\t\t}\n\t\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/create/canvas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create",
+								"canvas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/add/note/in/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"modelId\" : \"5d075abb0355d1557416435d\",\n    \"note\":{\n    \t\"title\":\"test 1\",\n    \t\"color\":\"#000000\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/add/note/in/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add",
+								"note",
+								"in",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/all/canvas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get/all/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"all",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/canvas/byId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"canvasId\" : \"5d035f6367233845a0e99d5a\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/canvas/byId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"canvas",
+								"byId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"canvasId\" : \"5d04eca43b46842bf4dc01ca\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/edit/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"canvasId\":\"5d075abb0355d1557416435b\",\n\t\"canvasName\":\"system tese 99+++++++++++++++\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/edit/note/in/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"canvasId\":\"5d075abb0355d1557416435b\",\n\t\"modelId\":\"5d075abb0355d1557416435d\",\n    \"noteId\" : \"5d076158a780de4f30c660a5\",\n    \"note\":{\n    \t\"title\":\"test 1\",\n    \t\"color\":\"#000000\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/note/in/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"note",
+								"in",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "history",
+			"item": []
+		}
+	]
+}

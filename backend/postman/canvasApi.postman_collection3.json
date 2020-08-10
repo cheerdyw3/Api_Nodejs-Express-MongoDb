@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "6bab2f66-9c52-489f-a40d-8069d8a8606d",
+		"name": "canvasApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pattern",
+			"item": [
+				{
+					"name": "/create/pattern/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"partentName\" : \"BMC\",\n    \"imagePattern\" : \"BMC.jpg\",\n    \"model\": [\n\t\t\t{\n\t\t\t\t\"index\":0,\n\t    \t\t\"name\" : \"Key Partners\"\n\t\t\t},{\n\t\t\t\t\"index\":1,\n\t    \t\t\"name\" : \"Key Activities\"\n\t\t\t},{\n\t\t\t\t\"index\":2,\n\t    \t\t\"name\" : \"Key Resources\"\n\t\t\t},{\n\t\t\t\t\"index\":3,\n\t    \t\t\"name\" : \"Value Propositions\"\n\t\t\t},{\n\t\t\t\t\"index\":4,\n\t    \t\t\"name\" : \"Customer Relationships\"\n\t\t\t},{\n\t\t\t\t\"index\":5,\n\t    \t\t\"name\" : \"Channels\"\n\t\t\t},{\n\t\t\t\t\"index\":6,\n    \t\t\t\"name\" : \"Customer Segments\"\n\t\t\t},{\n\t\t\t\t\"index\":7,\n\t    \t\t\"name\" : \"Cost Structure\"\n\t\t\t},{\n\t\t\t\t\"index\":8,\n\t    \t\t\"name\" : \"Revenue Streams\"\n\t\t\t}\n\t\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/create/pattern/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create",
+								"pattern",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/edit/pattern",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\" : \"5d077ca9ef21533ac85e9368\",\n\t\"partentName\" : \"cheerModels\",\n    \"imagePattern\" : \"cheerModels.jpg\",\n    \"model\":[\n\t\t{\n\t\t\t\"name\" : \"s\"\n\t\t},{\n    \t\t\"name\" : \"c\"\n\t\t},{\n    \t\t\"name\" : \"v\"\n\t\t},{\n    \t\t\"name\" : \"f\"\n\t\t},{\n    \t\t\"name\" : \"d\"\n\t\t},{\n    \t\t\"name\" : \"s\"\n\t\t},{\n    \t\t\"name\" : \"a\"\n\t\t},{\n    \t\t\"name\" : \"b\"\n\t\t},{\n    \t\t\"name\" : \"b\"\n\t\t}\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/all/pattern",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get/all/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"all",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/pattern/byId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\":\"5d0368c6a17ce63440b5b932\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/pattern/byId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"pattern",
+								"byId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete/pattern",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\":\"5d0375c87caded5304f2da1e\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "canvas",
+			"item": [
+				{
+					"name": "/create/canvas/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":\"5d022b713418fb3f806dce99\",\n    \"batchId\":\"5d022b713418fb3f806dce10\",\n    \"patternId\":\"5d08cdd4443cd304486cad9d\",\n    \"canvasName\":\"cheer bmc\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/create/canvas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create",
+								"canvas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/add/note/in/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\" : \"5d08691c4034e30dc0c77038\",\n\t\"canvasId\" : \"5d08cfe8ca39e6384c82a286\",\n    \"modelId\" : \"5d08cfe8ca39e6384c82a28f\",\n    \"note\":{\n    \t\"title\":\"sssss\",\n    \t\"color\":\"#sssss\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/add/note/in/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add",
+								"note",
+								"in",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/all/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":\"5d022b713418fb3f806dce99\",\n    \"batchId\" : \"5d022b713418fb3f806dce10\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/all/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"all",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/canvas/byId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"canvasId\" : \"5d035f6367233845a0e99d5a\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/canvas/byId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"canvas",
+								"byId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"canvasId\" : \"5d04eca43b46842bf4dc01ca\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/edit/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\" : \"5d08691c4034e30dc0c77038\",\n\t\"canvasId\":\"5d08cfe8ca39e6384c82a286\",\n\t\"canvasName\":\"BMC CHEER\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/edit/note/in/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\" : \"5d08691c4034e30dc0c77038\",\n\t\"canvasId\":\"5d08cfe8ca39e6384c82a286\",\n    \"noteId\" : \"5d08d24faecf2b31e4b373e2\",\n    \"note\":{\n    \t\"title\":\"maketing tree 77777\",\n    \t\"color\":\"#585511\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/note/in/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"note",
+								"in",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete/note/in/canvas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\" : \"5d08691c4034e30dc0c77038\",\n\t\"canvasId\":\"5d08cfe8ca39e6384c82a286\",\n    \"noteId\" : \"5d08d374d159764b94406605\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete/note/in/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"note",
+								"in",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/history/ById",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"canvasId\":\"5d08cfe8ca39e6384c82a286\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/canvas/history/ById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"canvas",
+								"history",
+								"ById"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "history",
+			"item": []
+		}
+	]
+}

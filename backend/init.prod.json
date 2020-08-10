@@ -1,0 +1,11 @@
+{
+    "port": 3096,
+	"mongoAddress": "mongodb://206.189.154.242:27017/canvas",
+	"DATABASEUSERNAME": "admin",
+	"DATABASEPASSWORD": "ayQXyMUAK73Z3mY22kKBPkcrfcAh7NUE",
+	"DATABASEHOST": "192.168.0.5",
+	"DATABASEPORT": "27017",
+	"DATABASENAME": "canvas",
+	"baseUrlBackend":"https://api.canvas.integreat.in.th/",
+	"baseUrlFrontend":""
+}

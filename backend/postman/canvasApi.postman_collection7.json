@@ -1,0 +1,788 @@
+{
+	"info": {
+		"_postman_id": "6bab2f66-9c52-489f-a40d-8069d8a8606d",
+		"name": "canvasApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pattern",
+			"item": [
+				{
+					"name": "/create/pattern/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"partentName\" : \"BMC\",\n    \"imagePattern\" : \"BMC.jpg\",\n    \"model\": [\n\t\t\t{\n\t\t\t\t\"index\":0,\n\t    \t\t\"name\" : \"Key Partners\"\n\t\t\t},{\n\t\t\t\t\"index\":1,\n\t    \t\t\"name\" : \"Key Activities\"\n\t\t\t},{\n\t\t\t\t\"index\":2,\n\t    \t\t\"name\" : \"Key Resources\"\n\t\t\t},{\n\t\t\t\t\"index\":3,\n\t    \t\t\"name\" : \"Value Propositions\"\n\t\t\t},{\n\t\t\t\t\"index\":4,\n\t    \t\t\"name\" : \"Customer Relationships\"\n\t\t\t},{\n\t\t\t\t\"index\":5,\n\t    \t\t\"name\" : \"Channels\"\n\t\t\t},{\n\t\t\t\t\"index\":6,\n    \t\t\t\"name\" : \"Customer Segments\"\n\t\t\t},{\n\t\t\t\t\"index\":7,\n\t    \t\t\"name\" : \"Cost Structure\"\n\t\t\t},{\n\t\t\t\t\"index\":8,\n\t    \t\t\"name\" : \"Revenue Streams\"\n\t\t\t}\n\t\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/create/pattern/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create",
+								"pattern",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/edit/pattern",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\" : \"5d077ca9ef21533ac85e9368\",\n\t\"partentName\" : \"cheerModels\",\n    \"imagePattern\" : \"cheerModels.jpg\",\n    \"model\":[\n\t\t{\n\t\t\t\"name\" : \"s\"\n\t\t},{\n    \t\t\"name\" : \"c\"\n\t\t},{\n    \t\t\"name\" : \"v\"\n\t\t},{\n    \t\t\"name\" : \"f\"\n\t\t},{\n    \t\t\"name\" : \"d\"\n\t\t},{\n    \t\t\"name\" : \"s\"\n\t\t},{\n    \t\t\"name\" : \"a\"\n\t\t},{\n    \t\t\"name\" : \"b\"\n\t\t},{\n    \t\t\"name\" : \"b\"\n\t\t}\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/all/pattern",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get/all/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"all",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/pattern/byId",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\":\"5d0368c6a17ce63440b5b932\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/pattern/byId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"pattern",
+								"byId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete/pattern",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patternId\":\"5d0375c87caded5304f2da1e\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete/pattern",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"pattern"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "canvas",
+			"item": [
+				{
+					"name": "note",
+					"item": [
+						{
+							"name": "/add/note/in/canvas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"canvasId\" : \"5d12ddca9e07a71cbc3d91e2\",\r\n    \"modelId\" : \"5d12ddca9e07a71cbc3d91eb\",\r\n    \"note\":{\r\n    \t\"title\":\"system by cheerddddd\",\r\n    \t\"color\":{\r\n                \"hex\": \"#363636\",\r\n                \"hsl\": {\"h\":0,\"s\":0,\"l\":0.21176470588235294,\"a\":1},\r\n                \"hsv\": {\"h\":0,\"s\":0,\"v\":0.21176470588235294,\"a\":1},\r\n                \"rgba\": {\"r\": 54, \"g\": 54, \"b\": 54, \"a\": 1},\r\n                \"a\": 1\r\n            }\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/add/note/in/canvas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"add",
+										"note",
+										"in",
+										"canvas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/edit/note/in/canvas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"canvasId\":\"5d12ddca9e07a71cbc3d91e2\",\r\n    \"noteId\" : \"5d12e3b2ca945b4920e87fc6\",\r\n    \"note\":{\r\n    \t\"title\":\"test edit11111\",\r\n    \t\"color\":{\r\n\t        \"hex\": \"#789\",\r\n\t        \"hsl\": {\"h\":1,\"s\":0,\"l\":0.21176470588235294,\"a\":1},\r\n\t        \"hsv\": {\"h\":1,\"s\":0,\"v\":0.21176470588235294,\"a\":1},\r\n\t        \"rgba\": {\"r\": 1, \"g\": 54, \"b\": 54, \"a\": 1},\r\n\t        \"a\": 1\r\n    \t}\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/edit/note/in/canvas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"edit",
+										"note",
+										"in",
+										"canvas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/delete/note/in/canvas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"canvasId\":\"5d12ddca9e07a71cbc3d91e2\",\n    \"noteId\" : \"5d12e5caa843235420a28e5d\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/delete/note/in/canvas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"delete",
+										"note",
+										"in",
+										"canvas"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/create/canvas/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"batch\":{\n\t\t\"id\" : \"5d022b713418fb3f806dce10\",\n\t\t\"name\" : \"Batch Name\"\n\t},\n    \"patternId\":\"5d08cdd4443cd304486cad9d\",\n    \"canvasName\":\"CHEER DYW BMC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/create/canvas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create",
+								"canvas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/edit/canvas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"canvasId\":\"5d12ddaf9e07a71cbc3d91d7\",\n\t\"canvasName\":\"cheer canvass\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete/canvas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"canvasId\" : \"5d12ddac9e07a71cbc3d91cc\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/all/canvas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"batchId\" : \"5d022b713418fb3f806dce10\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/all/canvas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"all",
+								"canvas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/canvas/byId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"canvasId\" : \"5d12ddca9e07a71cbc3d91e2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/canvas/byId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"canvas",
+								"byId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/history/ById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"canvasId\":\"5d12ddca9e07a71cbc3d91e2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/canvas/history/ById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"canvas",
+								"history",
+								"ById"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/invite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"canvasId\": \"5d0c9ebe063ab50e89e8461a\",\n\t\"email\": \"cheerdyw3@gmail.com\",\n\t\"role\": 0\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/invite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/edit/profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEyZDk5MmQ2ZmQyOTYwOWM3NWJmMzQiLCJpYXQiOjE1NjE1MTY2NjgsImV4cCI6MTU2MTYwMzA2OH0.NLRXEW-RytBQo3iVsYrVtl52abIk4YGaU6fP1FjTGHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"titleName\":\"นาย\",\n\t\"name\":\"dulyawat1\",\n\t\"surname\":\"sombut1\",\n\t\"telephoneNumber\":\"04444444\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/edit/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"edit",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/checkEmail FROM integreat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"email\" : \"cheerdywse@gmail.com\",\n\t\t\"titleName\":\"นาย\",\n\t\t\"name\": \"cheer\",\n\t\t\"surname\" : \"mentor\",\n\t\t\"telephoneNumber\": \"0884018847\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/check/email/outside",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"check",
+								"email",
+								"outside"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"cheer@gmail.com\",\n\t\"password\":123456789\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/get/canvas/:token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get/canvas/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEwODM2ZmMyN2Y4NzUzZDRkYzZlMzgiLCJjYW52YXNJZCI6IjVkMTA1MjFhOGJmYWIzMmI3OGNiMTBlNyIsInJvbGUiOjEsImlhdCI6MTU2MTQxMjEzMSwiZXhwIjoxNTYxNDk4NTMxfQ.g3mFLZTMXMkmRgKrZTSs9CqKFf6tcXdw9aeukWQridg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"canvas",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDEwODM2ZmMyN2Y4NzUzZDRkYzZlMzgiLCJjYW52YXNJZCI6IjVkMTA1MjFhOGJmYWIzMmI3OGNiMTBlNyIsInJvbGUiOjEsImlhdCI6MTU2MTQxMjEzMSwiZXhwIjoxNTYxNDk4NTMxfQ.g3mFLZTMXMkmRgKrZTSs9CqKFf6tcXdw9aeukWQridg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/get/canvas/from/invite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW52YXNJZCI6IjVkMGNiZDZhMTMwYjQ1NDAyYzdmNWFjNiIsInVzZXJJZCI6IjVkMTFhYzQ0ZTlhYzFlMDRlY2E4N2FkZiIsInJvbGUiOjAsImlhdCI6MTU2MTQ1MzE4Nn0.jvCYrjwPoGsLdnzEKw57lrA13N4DhSE4qoEbqT2xbEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get/canvas/from/invite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"canvas",
+								"from",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/user/detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW52YXNJZCI6IjVkMGM5ZWJlMDYzYWI1MGU4OWU4NDYxYSIsInVzZXJJZCI6IjVkMTJlYWQwNThiNWRkM2E1MGY5MmYxNiIsInJvbGUiOjAsImlhdCI6MTU2MTU0MDcyOH0.Aauts3qfkRbHRYXmADWMe7e4LL89SPhrNZsa_TulJT0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/get/user/detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get",
+								"user",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

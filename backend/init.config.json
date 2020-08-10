@@ -1,0 +1,10 @@
+{
+    "DATABASEUSERNAME":"",
+    "DATABASEPASSWORD":"",
+    "DATABASEHOST":"localhost",
+    "DATABASEPORT":"27017",
+    "DATABASENAME":"canvas",
+    "mongoAddress":"",
+	"baseUrlBackend":"http://localhost:3000/",
+	"baseUrlFrontend":"https://uat.canvas.integreat.in.th/"
+}
